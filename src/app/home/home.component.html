@@ -1,0 +1,15 @@
+<nav class="navbar navbar-dark bg-dark" style="margin-top: -10px; padding-top: 10px; padding-bottom: 67px;">
+    <a class="navbar-brand text-white">{{userDetails.fullName}} Info:</a>
+    <ul>
+      <button class="btn btn-danger my-2 my-sm-0" style="margin-left: 15px;" (click)="onToDo()">ToDos</button>
+      <button class="btn btn-danger my-2 my-sm-0" style="margin-left: 15px;" (click)="onLogout()">Logout</button>
+    </ul>    
+  </nav>
+
+<div id="userDetails" class="card m-5" style="width:18rem" *ngIf="userDetails">
+  <ul class="list-group">
+    <li class="list-group-item"><strong>Username : </strong>{{userDetails.name}}</li>
+    <li class="list-group-item"><strong>FullName : </strong>{{userDetails.fullName}}</li>
+    <li class="list-group-item"><strong>Email : </strong>{{userDetails.email}}</li>
+  </ul>
+</div>

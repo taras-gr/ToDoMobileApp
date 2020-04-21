@@ -1,0 +1,47 @@
+<nav class="navbar navbar-dark bg-dark" style="margin-top: -10px; padding-top: 10px; padding-bottom: 67px;">
+  <a class="navbar-brand text-white">Edit {{toDoItem.title}}</a>
+  <ul>
+    <button class="btn btn-info my-2 my-sm-0" (click)="onUserInfo()">User Info</button>
+    <button class="btn btn-danger my-2 my-sm-0" style="margin-left: 15px;" (click)="onLogout()">Logout</button>
+  </ul>    
+</nav>
+
+<div>
+  
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-form-label" style="text-transform: none; font-size: 20px;">Title: &nbsp;&nbsp;&nbsp;</label>
+    <div class="col-sm-4">      
+        <input style="" type="email" [(ngModel)]="toDoItem.title" class="cardform-control" id="inputEmail3" style="background: white; color: #000;">
+    </div>    
+  </div>
+  <div class="form-group row">
+      <label for="inputEmail3" class="col-form-label" style="text-transform: none; font-size: 20px;">Details: </label>
+      <div class="col-sm-4">
+          <input type="email" [(ngModel)]="toDoItem.text" class="form-control" id="inputEmail3" style="background: white; color: #000;">
+      </div>    
+    </div>
+  <div class="form-group row">
+    <div class="col-sm-1">
+        <label>
+          <label for="inputEmail3" class="col-form-label" style="text-transform: none; font-size: 20px;">Is done: </label>
+
+            <input type="checkbox" [(ngModel)]="toDoItem.isDone" class="filled-in" />
+            <span><h6 style="color: black; display: inline; font-weight: bolder;"></h6> </span>
+          </label>
+    </div>    
+  </div>
+  <div class="form-group row">
+    <div style="margin: 0 auto;">
+      <ul>
+        <li style="float: right;">
+          <button type="button" (click)="onDeleteToDo(toDoItem)" class="btn btn-danger">Delete</button>
+        </li>
+        <li  style="float: right; margin-right: 40px;">
+          <button type="button" (click)="onEditToDo(toDoItem)" class="btn btn-outline-primary">Submit</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</div>
